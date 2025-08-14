@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>On-Screen Keyboard</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0 10px; 
+      font-family: "Segoe UI", sans-serif;
+      min-width: 320px; 
+      transition: background-color .3s, color .3s;
+    }
+    body {
+      background-color: rgb(211, 211, 211);
+    }
+    .popup-wrapper {
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      text-align: center;
+    }
+    .container {
+      background-color: #f8f8f8; 
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: background-color .3s, box-shadow .3s;
+    }
+    .option {
+      display: grid;
+      grid-template-columns: 100px 1fr; 
+      align-items: center;
+      gap: 10px;
+    }
+    label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    select {
+      width: 100%;
+      padding: 7px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #fafafa;
+      transition: background-color .3s, border-color .3s;
+    }
+    select:focus {
+      outline: none;
+      border-color: #888;
+    }
+    .footer, .socials {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 15px;
+      opacity: .7;
+    }
+    .socials a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .socials a:hover {
+      text-decoration: underline;
+    }
+
+ 
+    body.dark-mode {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+    body.dark-mode .container {
+      background-color: #2a2a2a;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+    body.dark-mode select {
+      background-color: #333;
+      border: 1px solid #555;
+      color: #e0e0e0;
+    }
+    body.dark-mode select:focus {
+      border-color: #888;
+    }
+    body.dark-mode h1,
+    body.dark-mode label,
+    body.dark-mode .footer,
+    body.dark-mode .socials {
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-wrapper">
+    <h1>On-Screen Keyboard</h1>
+
+    <div class="container">
+      <div class="option">
+        <label for="themeSelect">Theme</label>
+        <select id="themeSelect">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      <div class="option">
+        <label for="langSelect">Language</label>
+        <select id="langSelect">
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+          <option value="ru">Русский</option>
+        </select>
+      </div>
+
+      <div class="option">
+        <label for="visibilitySelect">Visibility</label>
+        <select id="visibilitySelect">
+          <option value="alwayson">Always On</option>
+          <option value="ontextbox">On Input</option>
+          <option value="alwaysoff">Always Off</option>
+        </select>
+      </div>
+
+      <div class="option">
+        <label for="positionSelect">Position</label>
+        <select id="positionSelect">
+          <option value="top-left">Top Left</option>
+          <option value="top-center">Top Center</option>
+          <option value="top-right">Top Right</option>
+          <option value="bottom-left">Bottom Left</option>
+          <option value="bottom-center">Bottom Center</option>
+          <option value="bottom-right">Bottom Right</option>
+          <option value="drag">Draggable</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="footer">Developed by LKWFahrer_300KMH</div>
+    <div class="socials">
+      <strong>Follow me:</strong><br>
+      <a href="https://www.instagram.com/lkwfahrer_300kmh/" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
